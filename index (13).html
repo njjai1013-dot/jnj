@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jai N J | Strategic HR Business Partner & Project Manager | Abu Dhabi</title>
+  <meta name="description" content="Jai N J, Strategic HR Business Partner and Project Manager in Abu Dhabi, UAE. Workforce planning, talent acquisition, Oracle ERP and digital transformation for UAE government and enterprise.">
+  <meta name="theme-color" content="#0B1220">
+  <style>
+    :root {
+      --bg: #0B1220;
+      --bg-2: #0F1828;
+      --panel: #131E31;
+      --panel-2: #18253C;
+      --line: #243552;
+      --text: #F5F1E8;
+      --muted: #97A3B8;
+      --gold: #C9A227;
+      --sand: #E9DDBE;
+      --green: #17905B;
+      --red: #C8102E;
+      --ease: cubic-bezier(.2,.7,.2,1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; transition: filter .6s var(--ease); }
+    html.mono { filter: grayscale(1); }
+    html.invert { filter: grayscale(1) invert(1); }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.65; overflow-x: hidden;
+    }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -0.01em; }
+    h1 { font-size: clamp(2.6rem, 6.5vw, 4.6rem); line-height: 1.05; }
+    h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); margin-bottom: 26px; line-height: 1.2; }
+    h3 { font-size: 1.1rem; font-weight: 600; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+    section { padding: 104px 0; border-top: 1px solid var(--line); position: relative; }
+    .eyebrow { color: var(--gold); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.22em; margin-bottom: 16px; font-weight: 600; }
+    .muted { color: var(--muted); }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+
+    /* Geometric divider inspired by UAE architecture */
+    .motif { height: 14px; background-image: linear-gradient(135deg, var(--gold) 25%, transparent 25%), linear-gradient(225deg, var(--gold) 25%, transparent 25%); background-size: 14px 14px; opacity: .55; }
+
+    /* Intro */
+    #intro { position: fixed; inset: 0; z-index: 100; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; transition: opacity .8s var(--ease), visibility .8s; }
+    #intro.hidden { opacity: 0; visibility: hidden; }
+    #intro .name { font-family: Georgia, serif; font-size: 1.25rem; color: var(--sand); letter-spacing: .14em; }
+    .progress { width: 220px; height: 2px; background: var(--line); border-radius: 2px; overflow: hidden; }
+    .progress span { display: block; height: 100%; width: 0; background: var(--gold); transition: width 1.6s linear; }
+    #enterBtn { padding: 12px 28px; border-radius: 999px; border: 1px solid var(--gold); color: var(--gold); opacity: 0; transform: translateY(8px); pointer-events: none; transition: opacity .5s, transform .5s var(--ease), background .2s, color .2s; }
+    #enterBtn.ready { opacity: 1; transform: none; pointer-events: auto; }
+    #enterBtn.ready:hover { background: var(--gold); color: var(--bg); }
+
+    /* Top bar */
+    .topbar { position: sticky; top: 0; z-index: 11; display: flex; align-items: center; justify-content: space-between; gap: 18px; height: 34px; padding: 0 70px 0 24px; background: #070C16; border-bottom: 1px solid var(--line); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+    .tb-time { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+    .tb-time b { color: var(--text); font-weight: 600; }
+    .tb-flag { display: inline-block; width: 16px; height: 10px; background: linear-gradient(#17905B 0 33%, #F5F1E8 33% 66%, #C8102E 66%); border-radius: 1px; }
+    .tb-date { color: var(--sand); white-space: nowrap; }
+    @media (max-width: 700px) { .tb-date { display: none; } }
+
+    header { position: sticky; top: 34px; z-index: 10; background: rgba(11,18,32,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    header .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; gap: 16px; }
+    header nav { display: flex; gap: 24px; }
+    header nav a { color: var(--muted); font-size: 0.9rem; position: relative; transition: color .2s; }
+    header nav a:hover { color: var(--text); text-decoration: none; }
+    header nav a.active { color: var(--text); }
+    header nav a.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: var(--gold); }
+    .brand { color: var(--text); font-family: Georgia, serif; font-size: 1.1rem; letter-spacing: .04em; }
+    .brand span { color: var(--gold); }
+    @media (max-width: 900px) { header .wrap { padding-right: 64px; } }
+    @media (max-width: 640px) { header nav { gap: 14px; } header nav a { font-size: 0.8rem; } header nav a.hide-sm { display: none; } }
+
+    /* Pull cord */
+    .rope { position: fixed; top: 0; right: 16px; z-index: 70; display: flex; flex-direction: column; align-items: center; cursor: pointer; transform-origin: 50% 0; outline: none; }
+    .rope .cord { width: 2px; height: 70px; background: linear-gradient(#4a5770, var(--muted)); transition: height .22s var(--ease); }
+    .rope.pulling .cord { height: 104px; }
+    .rope .knob { width: 30px; height: 30px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #F3E3A6, var(--gold) 60%, #6E5612); box-shadow: 0 6px 16px rgba(0,0,0,.45); }
+    .rope .label { position: absolute; right: 44px; top: 84px; font-size: 11px; white-space: nowrap; color: var(--muted); opacity: 0; transition: opacity .3s; pointer-events: none; }
+    .rope:hover .label, .rope:focus-visible .label { opacity: 1; }
+    .rope.swing { animation: swing .8s ease-out; }
+    @keyframes swing { 0% { transform: rotate(0); } 20% { transform: rotate(9deg); } 45% { transform: rotate(-7deg); } 70% { transform: rotate(3deg); } 100% { transform: rotate(0); } }
+
+    /* Section dots */
+    .dots { position: fixed; left: 18px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 14px; z-index: 30; }
+    .dots a { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--muted); transition: transform .3s var(--ease), background .3s, border-color .3s; }
+    .dots a:hover { transform: scale(1.4); border-color: var(--gold); }
+    .dots a.on { background: var(--gold); border-color: var(--gold); transform: scale(1.3); }
+    @media (max-width: 1100px) { .dots { display: none; } }
+
+    /* Reveals */
+    .reveal { opacity: 0; }
+    .reveal.in { animation: rise .9s var(--ease) calc(var(--d, 0) * 80ms) both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+    .split .ch { display: inline-block; opacity: 0; transform-origin: 50% 100%; }
+    .split.in .ch { animation: flip .8s var(--ease) both; animation-delay: calc(var(--d) * 45ms); }
+    .split .sp { display: inline-block; width: .3em; }
+    @keyframes flip { from { opacity: 0; transform: translateY(30px) rotateX(-90deg); } to { opacity: 1; transform: none; } }
+
+    /* Hero */
+    .hero { padding: 130px 0 110px; border-top: none; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: center; will-change: transform; }
+    .status { display: inline-flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--muted); margin-bottom: 26px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(23,144,91,.6); animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(23,144,91,.6); } 70% { box-shadow: 0 0 0 10px rgba(23,144,91,0); } 100% { box-shadow: 0 0 0 0 rgba(23,144,91,0); } }
+    .hero .headline { font-size: 1.1rem; color: var(--sand); margin: 18px 0 0; max-width: 720px; }
+    .hero .lede { font-size: 1.05rem; color: var(--muted); max-width: 640px; margin: 18px 0 38px; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-block; padding: 13px 26px; border-radius: 999px; border: 1px solid var(--line); color: var(--text); font-size: 0.95rem; transition: transform .25s var(--ease), background .2s, border-color .2s, color .2s; will-change: transform; }
+    .btn:hover { text-decoration: none; border-color: var(--gold); color: var(--gold); }
+    .btn.primary { background: var(--gold); color: var(--bg); border-color: var(--gold); font-weight: 600; }
+    .btn.primary:hover { color: var(--bg); filter: brightness(1.08); }
+    .scroll-cue { margin-top: 60px; color: var(--muted); font-size: 0.82rem; letter-spacing: .14em; text-transform: uppercase; display: flex; align-items: center; gap: 12px; }
+    .scroll-cue i { display: inline-block; width: 16px; height: 16px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg); animation: bob 1.6s infinite; }
+    @keyframes bob { 0%,100% { transform: rotate(45deg) translate(0,0); } 50% { transform: rotate(45deg) translate(3px,3px); } }
+
+    /* Hero 3D orbit */
+    .orbit { position: relative; perspective: 900px; height: 360px; display: grid; place-items: center; }
+    #webgl { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .orbit-inner { position: relative; transform-style: preserve-3d; transition: transform .5s var(--ease); }
+    .ring { position: relative; width: 0; height: 0; transform-style: preserve-3d; animation: spin 26s linear infinite; }
+    .slot { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; transform: rotateY(calc(var(--i) * 60deg)) translateZ(175px); }
+    .slot span { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; background: rgba(19,30,49,.92); color: var(--sand); font-size: 0.8rem; white-space: nowrap; backface-visibility: hidden; transition: border-color .2s, color .2s; }
+    .slot span:hover { border-color: var(--gold); color: var(--gold); }
+    @keyframes spin { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+
+    /* Strip */
+    .strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; padding: 20px 0; background: var(--bg-2); }
+    .strip-track { display: flex; width: max-content; animation: marquee 34s linear infinite; }
+    .strip-track span { font-family: Georgia, serif; font-size: 1.05rem; color: var(--muted); padding: 0 28px; white-space: nowrap; }
+    .strip-track span::after { content: "◆"; color: var(--gold); margin-left: 56px; font-size: .6rem; vertical-align: middle; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* About + photo */
+    .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 64px; align-items: center; }
+    .portrait { position: relative; border-radius: 4px; overflow: hidden; border: 1px solid var(--line); background: var(--panel); transform-style: preserve-3d; transition: transform .5s var(--ease); }
+    .portrait::before { content: ""; position: absolute; inset: 16px -16px -16px 16px; border: 1px solid var(--gold); border-radius: 4px; z-index: 0; opacity: .5; }
+    .portrait img { position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%; transition: transform .6s var(--ease); }
+    .portrait:hover img { transform: scale(1.03); }
+    .portrait .initials { display: none; }
+    .portrait.no-photo img { display: none; }
+    .portrait.no-photo .initials { position: relative; z-index: 1; display: grid; place-items: center; aspect-ratio: 4 / 5; font-family: Georgia, serif; font-size: 4rem; color: var(--gold); background: radial-gradient(circle at 30% 25%, rgba(201,162,39,.2), transparent 60%), var(--panel); }
+    .portrait figcaption { position: absolute; z-index: 2; left: 14px; bottom: 14px; font-size: 12px; color: var(--sand); background: rgba(11,18,32,.75); padding: 6px 12px; border-radius: 999px; }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .portrait { max-width: 340px; margin: 0 auto; } }
+
+    .summary p { color: var(--muted); max-width: 720px; margin-bottom: 18px; font-size: 1.04rem; }
+    .skills-line { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 40px; }
+    .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 24px; position: relative; overflow: hidden; }
+    .stat::before { content: ""; position: absolute; left: 0; top: 0; height: 2px; width: 100%; background: linear-gradient(90deg, var(--red), var(--gold), var(--green)); opacity: .7; }
+    .stat strong { display: block; font-family: Georgia, serif; font-size: 1.9rem; color: var(--gold); font-weight: 500; font-variant-numeric: tabular-nums; }
+    .stat span { color: var(--muted); font-size: 0.9rem; }
+
+    /* Tags and chips */
+    .tag, .chip { display: inline-block; font-size: 0.84rem; padding: 7px 15px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); transition: color .25s, border-color .25s, background .25s, transform .25s var(--ease); }
+    .tag:hover, .chip:hover { color: var(--text); border-color: var(--gold); transform: translateY(-2px); }
+    .chip { background: transparent; }
+    .chip[aria-pressed="true"] { background: var(--gold); color: var(--bg); border-color: var(--gold); font-weight: 600; }
+
+    /* Snapshot */
+    .snap { padding: 56px 0; }
+    .snap-box { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 30px 32px; }
+    .snap-text { color: var(--muted); max-width: 440px; }
+    .snap-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    /* Focus doors */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; align-items: start; }
+    .door { width: 100%; text-align: left; display: block; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 28px; transition: border-color .3s, background .3s; }
+    .door:hover { border-color: var(--gold); background: var(--panel-2); }
+    .door-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .door-head .plus { color: var(--gold); font-size: 1.5rem; line-height: 1; transition: transform .4s var(--ease); }
+    .door[aria-expanded="true"] .plus { transform: rotate(135deg); }
+    .door-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ease); }
+    .door[aria-expanded="true"] .door-body { grid-template-rows: 1fr; }
+    .door-body > div { overflow: hidden; }
+    .door ul { list-style: none; margin-top: 14px; }
+    .door li { color: var(--muted); font-size: 0.94rem; padding: 5px 0; }
+    .door li::before { content: "— "; color: var(--gold); }
+
+    /* Timeline */
+    .timeline-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; gap: 16px; }
+    .counter { color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+    .counter b { color: var(--text); font-weight: 600; display: inline-block; }
+    .counter b.bump { animation: bump .45s var(--ease); }
+    @keyframes bump { from { transform: translateY(-8px); opacity: 0; } to { transform: none; opacity: 1; } }
+    .arrows { display: flex; gap: 8px; }
+    .arrow { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; transition: border-color .2s, color .2s, transform .25s var(--ease); color: var(--sand); }
+    .arrow:hover { border-color: var(--gold); color: var(--gold); transform: scale(1.06); }
+    .arrow:disabled { opacity: .3; cursor: default; transform: none; }
+    .track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 12px 4px 28px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+    .entry { flex: 0 0 min(440px, 86%); scroll-snap-align: start; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 28px; transition: border-color .3s, transform .4s var(--ease); }
+    .entry:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .entry .date { color: var(--gold); font-size: 0.8rem; letter-spacing: .08em; text-transform: uppercase; }
+    .entry h3 { margin: 8px 0 4px; font-family: Georgia, serif; font-size: 1.25rem; font-weight: 500; }
+    .entry .org { color: var(--sand); margin-bottom: 14px; font-size: 0.93rem; }
+    .entry ul { list-style: none; }
+    .entry li { color: var(--muted); font-size: 0.93rem; padding: 5px 0; }
+    .entry li::before { content: "— "; color: var(--gold); }
+    .progress-bar { height: 2px; background: var(--line); margin-top: 10px; overflow: hidden; }
+    .progress-bar span { display: block; height: 100%; width: 20%; background: var(--gold); transition: width .3s var(--ease), margin-left .3s var(--ease); }
+
+    /* Flip cards for AI systems */
+    .flip { perspective: 1000px; min-height: 230px; cursor: pointer; }
+    .flip-inner { position: relative; width: 100%; height: 100%; min-height: 230px; transition: transform .7s var(--ease); transform-style: preserve-3d; }
+    .flip.open .flip-inner { transform: rotateY(180deg); }
+    .flip-face { position: absolute; inset: 0; backface-visibility: hidden; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; }
+    .flip-face.back { transform: rotateY(180deg); background: var(--panel-2); border-color: var(--gold); }
+    .flip-face h3 { font-family: Georgia, serif; font-weight: 500; font-size: 1.2rem; }
+    .flip-face p { color: var(--muted); font-size: 0.94rem; }
+    .flip-face .hint { color: var(--gold); font-size: 0.78rem; letter-spacing: .12em; text-transform: uppercase; }
+    .flip-face .outcome { color: var(--sand); font-size: 1rem; }
+    .flip:hover .flip-inner { box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+    .flip:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 6px; }
+
+    /* Constellation */
+    .c-intro { color: var(--muted); margin: -10px 0 26px; max-width: 640px; }
+    .constellation { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--bg-2); }
+    #cSvg { width: 100%; height: auto; display: block; }
+    .star-bg { fill: var(--sand); opacity: .35; }
+    .star-node { cursor: pointer; outline: none; }
+    .star-node .halo, .star-node .core { transform-box: fill-box; transform-origin: center; }
+    .star-node .halo { fill: rgba(201,162,39,.2); opacity: 0; transition: opacity .3s; }
+    .star-node .core { fill: var(--sand); transition: transform .35s var(--ease), fill .3s; }
+    .star-node text { fill: var(--muted); font-size: 13px; text-anchor: middle; transition: fill .3s; }
+    .star-node:hover .core { transform: scale(1.4); }
+    .star-node.active .core { fill: var(--gold); transform: scale(1.6); }
+    .star-node.active .halo { opacity: 1; animation: halo 1.8s ease-in-out infinite; }
+    .star-node.active text { fill: var(--text); }
+    .star-node:focus-visible .core { stroke: var(--gold); stroke-width: 2; }
+    @keyframes halo { 0%,100% { transform: scale(1); } 50% { transform: scale(1.5); opacity: .4; } }
+    .c-info { margin-top: 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 24px 26px; min-height: 150px; }
+    .c-info .c-date { color: var(--gold); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+    .c-info h3 { font-family: Georgia, serif; font-weight: 500; font-size: 1.25rem; margin-bottom: 2px; }
+    .c-info .c-org { color: var(--sand); font-size: .93rem; margin-bottom: 8px; }
+    .c-info p { color: var(--muted); }
+    .c-info.swap { animation: rise .5s var(--ease) both; }
+
+    /* Projects */
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; align-items: center; }
+    .count { margin-left: auto; color: var(--muted); font-size: 0.88rem; font-variant-numeric: tabular-nums; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+    .proj { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 10px; animation: pop .5s var(--ease) both; transition: border-color .3s, transform .4s var(--ease); }
+    .proj:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .proj.off { display: none; }
+    @keyframes pop { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .proj-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .proj-cat { font-size: 0.7rem; text-transform: uppercase; letter-spacing: .14em; color: var(--gold); }
+    .role { font-size: 0.74rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--sand); white-space: nowrap; }
+    .proj h3 { font-family: Georgia, serif; font-weight: 500; font-size: 1.05rem; line-height: 1.35; }
+    .proj .when { font-size: 0.82rem; color: var(--muted); }
+    .proj p { font-size: 0.9rem; color: var(--muted); }
+
+    /* Hover and click effects */
+    .spot { position: relative; overflow: hidden; }
+    .spot::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .35s; background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(201,162,39,.14), transparent 60%); }
+    .spot:hover::after { opacity: 1; }
+    .btn, .chip, .cert-chip, .arrow, .tag { position: relative; overflow: hidden; }
+    .btn:hover, .chip:hover { box-shadow: 0 10px 24px rgba(201,162,39,.2); }
+    .ripple { position: absolute; border-radius: 50%; background: rgba(245,241,232,.35); transform: scale(0); animation: ripple .6s ease-out forwards; pointer-events: none; }
+    @keyframes ripple { to { transform: scale(1); opacity: 0; } }
+    .cert-chip.picked { border-color: var(--gold); color: var(--gold); background: rgba(201,162,39,.1); }
+    .entry { cursor: pointer; }
+    .entry .go { display: block; margin-top: 16px; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); opacity: .55; transition: opacity .3s, transform .3s var(--ease); }
+    .entry:hover .go, .entry:focus-visible .go { opacity: 1; transform: translateX(4px); }
+    .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-bottom: 30px; }
+    .edu { border: 1px solid var(--line); border-radius: 6px; padding: 22px; background: var(--bg-2); transition: border-color .3s, transform .4s var(--ease); }
+    .edu:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .edu-deg { display: inline-block; font-family: Georgia, serif; font-size: 1.7rem; color: var(--gold); line-height: 1.1; }
+    .edu strong { display: block; font-weight: 600; margin-top: 6px; }
+    .edu > span:last-child { color: var(--muted); font-size: .9rem; }
+    .spec-title { font-size: .74rem; text-transform: uppercase; letter-spacing: .18em; color: var(--gold); margin-bottom: 14px; }
+    .spec-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .spec { text-align: left; border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; flex: 1 1 250px; background: var(--bg-2); transition: border-color .3s, background .3s, transform .3s var(--ease); }
+    .spec:hover, .spec[aria-expanded="true"] { border-color: var(--gold); background: var(--panel-2); transform: translateY(-2px); }
+    .spec strong { display: block; font-weight: 600; font-size: .95rem; color: var(--text); }
+    .spec small { display: block; color: var(--muted); font-size: .82rem; }
+    .spec .desc { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s var(--ease); }
+    .spec .desc > span { display: block; overflow: hidden; min-height: 0; }
+    .spec:hover .desc, .spec[aria-expanded="true"] .desc { grid-template-rows: 1fr; }
+    .spec .dtext { display: block; color: var(--sand); font-size: .88rem; margin-top: 10px; }
+
+    /* Education and certifications */
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 30px; }
+    .edu-list { list-style: none; display: grid; gap: 4px; }
+    .edu-list li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .edu-list li:last-child { border-bottom: 0; }
+    .edu-list strong { display: block; font-weight: 600; }
+    .edu-list span { color: var(--muted); font-size: 0.93rem; }
+    .cert-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cert-chip { font-size: 0.84rem; padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: var(--bg-2); transition: border-color .2s, color .2s, transform .25s var(--ease); display: inline-block; }
+    .cert-chip:hover { border-color: var(--gold); color: var(--text); transform: translateY(-2px); }
+    .cert-chip.extra { display: none; }
+    .cert-cloud.expanded .cert-chip.extra { display: inline-block; animation: pop .4s var(--ease) both; }
+    .cert-more { margin-top: 20px; color: var(--gold); font-size: 0.92rem; }
+    .cert-more:hover { text-decoration: underline; }
+
+    /* Contact */
+    .contact p { color: var(--muted); max-width: 640px; margin-bottom: 26px; font-size: 1.05rem; }
+    .topics { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+    dialog { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 8px; width: min(480px, calc(100% - 32px)); padding: 32px; }
+    dialog[open] { animation: rise .45s var(--ease) both; }
+    dialog::backdrop { background: rgba(5,9,16,.75); backdrop-filter: blur(4px); }
+    dialog h3 { font-family: Georgia, serif; font-weight: 500; font-size: 1.5rem; margin-bottom: 6px; }
+    dialog .sub { color: var(--muted); font-size: 0.93rem; margin-bottom: 20px; }
+    dialog label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 14px; }
+    dialog input, dialog textarea { display: block; width: 100%; margin-top: 6px; padding: 11px 14px; border-radius: 6px; background: var(--bg); color: var(--text); border: 1px solid var(--line); font: inherit; transition: border-color .2s, box-shadow .2s; }
+    dialog input:focus, dialog textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,39,.18); }
+    dialog textarea { min-height: 96px; resize: vertical; }
+    .dialog-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; }
+    .dialog-actions button { padding: 11px 20px; border-radius: 999px; border: 1px solid var(--line); color: var(--sand); }
+    .dialog-actions .send { background: var(--gold); color: var(--bg); border-color: var(--gold); font-weight: 600; }
+    .done { display: none; }
+    .done.show { display: block; animation: rise .5s var(--ease) both; }
+
+    #toTop { position: fixed; right: 22px; bottom: 22px; width: 46px; height: 46px; border-radius: 50%; z-index: 20; background: var(--panel); border: 1px solid var(--line); color: var(--gold); font-size: 1.1rem; opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .3s, transform .4s var(--ease), border-color .2s; }
+    #toTop.show { opacity: 1; transform: none; pointer-events: auto; }
+    #toTop:hover { border-color: var(--gold); }
+
+    footer { border-top: 1px solid var(--line); padding: 36px 0; color: var(--muted); font-size: 0.88rem; position: relative; z-index: 1; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+    @media (max-width: 820px) { .hero-grid { grid-template-columns: 1fr; } .orbit { height: 290px; } }
+    @media (max-width: 640px) { section { padding: 70px 0; } .hero { padding: 90px 0 80px; } .wrap { padding: 0 20px; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      .reveal, .split .ch { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<div class="rope" id="rope" role="switch" aria-checked="false" aria-label="Change page colours" tabindex="0">
+  <div class="cord"></div>
+  <div class="knob"></div>
+  <span class="label">Pull for B&amp;W</span>
+</div>
+
+<nav class="dots" id="dots" aria-label="Page sections">
+  <a href="#about" data-s="about" aria-label="About"></a>
+  <a href="#focus" data-s="focus" aria-label="Focus"></a>
+  <a href="#experience" data-s="experience" aria-label="Experience"></a>
+  <a href="#constellation" data-s="constellation" aria-label="Career constellation"></a>
+  <a href="#projects" data-s="projects" aria-label="Projects"></a>
+  <a href="#ai" data-s="ai" aria-label="AI systems"></a>
+  <a href="#credentials" data-s="credentials" aria-label="Education and certifications"></a>
+  <a href="#contact" data-s="contact" aria-label="Contact"></a>
+</nav>
+
+<div id="intro">
+  <div class="name">Jai N J</div>
+  <div class="progress"><span id="loadBar"></span></div>
+  <button id="enterBtn" type="button">Enter</button>
+</div>
+
+<div class="topbar">
+  <div class="tb-time"><span class="tb-flag" aria-hidden="true"></span> Abu Dhabi <b id="clock">--:--:--</b></div>
+  <div class="tb-date" id="dateLine">—</div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Jai N J<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#focus" class="hide-sm">Focus</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#ai" class="hide-sm">AI Systems</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="hero-grid" id="heroGrid">
+        <div>
+          <div class="status reveal"><span class="dot"></span> Open to senior roles · Abu Dhabi, UAE · <span id="localTime">—</span></div>
+          <h1 class="split" id="name">Jai N J</h1>
+          <p class="headline reveal">Strategic HR Business Partner | Project Manager | HRIS &amp; Oracle ERP | Digital &amp; Business Transformation | UAE Government</p>
+          <p class="lede reveal">I turn people strategy into working systems: workforce planning, talent acquisition and HR governance, delivered alongside the ERP and digital platforms that run them.</p>
+          <div class="buttons reveal">
+            <button class="btn primary magnetic" type="button" data-open-contact>Hire me</button>
+            <a class="btn magnetic" href="#projects">See my projects</a>
+          </div>
+          <div class="scroll-cue reveal"><i></i> Scroll to explore</div>
+        </div>
+
+        <div class="orbit" id="orbit">
+          <canvas id="webgl" aria-hidden="true"></canvas>
+          <div class="orbit-inner" id="orbitInner">
+            <div class="ring">
+              <div class="slot" style="--i:0"><span>HR Strategy</span></div>
+              <div class="slot" style="--i:1"><span>Oracle ERP</span></div>
+              <div class="slot" style="--i:2"><span>Project Management</span></div>
+              <div class="slot" style="--i:3"><span>AI Automation</span></div>
+              <div class="slot" style="--i:4"><span>Microsoft 365</span></div>
+              <div class="slot" style="--i:5"><span>Workforce Planning</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track">
+      <span>HR Business Partnering</span><span>Oracle Fusion</span><span>Digital Transformation</span><span>Workforce Planning</span><span>ISO 9001:2015</span><span>AI Automation</span><span>Microsoft 365</span><span>Change Management</span>
+      <span>HR Business Partnering</span><span>Oracle Fusion</span><span>Digital Transformation</span><span>Workforce Planning</span><span>ISO 9001:2015</span><span>AI Automation</span><span>Microsoft 365</span><span>Change Management</span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="summary">
+        <div class="eyebrow reveal">About</div>
+        <h2 class="reveal">Where people strategy meets delivery</h2>
+        <p class="reveal">I work at the point where HR decisions and technology delivery meet. Over seven years across UAE federal government, ADNOC's supply chain and private-sector firms, I have led workforce planning and talent acquisition, and delivered the ERP, Microsoft 365 and service platforms those workforces depend on.</p>
+        <p class="reveal">That combination is what sets my work apart. I can write the HR policy, configure the workflow that enforces it, and report on the results. My projects range from running HR for a 500-person engineering firm to multi-entity platforms shared across Abu Dhabi government entities.</p>
+        <p class="reveal">I hold an MBA and an MCom, and I am certified in PMP, PHR and Lean Six Sigma, with recent work in generative AI and AI automation.</p>
+        <div class="skills-line reveal">
+          <span class="tag">Finance</span>
+          <span class="tag">Operations Management</span>
+          <span class="tag">Project Management</span>
+        </div>
+      </div>
+      <figure class="portrait reveal" style="--d:1">
+        <img src="jai-photo.jpg" alt="Jai N J, HR Business Partner and Project Manager" loading="lazy" onerror="this.parentNode.classList.add('no-photo')">
+        <div class="initials">JNJ</div>
+        <figcaption>Jai N J · Abu Dhabi</figcaption>
+      </figure>
+    </div>
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat reveal" style="--d:0"><strong data-count="1" data-prefix="AED " data-suffix="M" data-decimals="0">AED 1M</strong><span>Recruitment cost savings through an in-house hiring strategy</span></div>
+        <div class="stat reveal" style="--d:1"><strong data-count="90" data-suffix="%" data-decimals="0">90%</strong><span>Reduction in paper-based processes at a federal entity</span></div>
+        <div class="stat reveal" style="--d:2"><strong data-count="99.9" data-suffix="%" data-decimals="1">99.9%</strong><span>Reduction in invoice processing errors with an AI validation tool</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="snap" id="snapshot">
+    <div class="wrap">
+      <div class="snap-box reveal">
+        <div>
+          <div class="eyebrow">Hiring snapshot</div>
+          <p class="snap-text">What are you hiring for? Pick a focus and I'll take you to the most relevant work.</p>
+        </div>
+        <div class="snap-chips">
+          <button class="chip" type="button" data-snap="hr">HR Business Partner</button>
+          <button class="chip" type="button" data-snap="pm">Project Manager</button>
+          <button class="chip" type="button" data-snap="adnoc">ADNOC &amp; Energy</button>
+          <button class="chip" type="button" data-snap="ai">AI Automation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="focus">
+    <div class="wrap">
+      <div class="eyebrow reveal">Focus</div>
+      <h2 class="reveal">How I add value</h2>
+      <div class="grid">
+        <button class="door reveal" type="button" aria-expanded="false">
+          <div class="door-head"><h3>People strategy</h3><span class="plus">+</span></div>
+          <div class="door-body"><div>
+            <ul>
+              <li>Workforce and manpower planning</li>
+              <li>Talent acquisition and employee lifecycle management</li>
+              <li>Employee relations and HR advisory</li>
+              <li>Performance management and HR governance</li>
+              <li>HR policies, compliance and UAE labor law</li>
+              <li>Outsourced workforce management and HR data reporting</li>
+            </ul>
+          </div></div>
+        </button>
+        <button class="door reveal" type="button" aria-expanded="false">
+          <div class="door-head"><h3>Digital delivery</h3><span class="plus">+</span></div>
+          <div class="door-body"><div>
+            <ul>
+              <li>Oracle ERP, Oracle Fusion and HRIS</li>
+              <li>Microsoft 365 and modern workplace</li>
+              <li>Enterprise systems implementation and cloud migration</li>
+              <li>Process automation and digital workflows</li>
+              <li>AI and emerging technology adoption</li>
+              <li>Change management and stakeholder management</li>
+            </ul>
+          </div></div>
+        </button>
+        <button class="door reveal" type="button" aria-expanded="false">
+          <div class="door-head"><h3>Governance &amp; quality</h3><span class="plus">+</span></div>
+          <div class="door-body"><div>
+            <ul>
+              <li>Budget and cost control</li>
+              <li>Vendor and contract management</li>
+              <li>ISO 9001:2015 quality auditing</li>
+              <li>IT governance and compliance</li>
+              <li>HRA and Ministry of Human Resources regulations</li>
+            </ul>
+          </div></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="eyebrow reveal">Experience</div>
+      <h2 class="reveal">My story</h2>
+      <div class="timeline-controls reveal">
+        <div class="counter"><b id="current">01</b> / <span id="total">09</span></div>
+        <div class="arrows">
+          <button class="arrow" id="prev" type="button" aria-label="Previous role">&#8592;</button>
+          <button class="arrow" id="next" type="button" aria-label="Next role">&#8594;</button>
+        </div>
+      </div>
+      <div class="track" id="track" tabindex="0" aria-label="Career timeline, scroll or use arrow keys">
+
+        <article class="entry">
+          <div class="date">Nov 2024 – Present · 2 yrs 1 mo</div>
+          <h3>Senior Specialist, HR / IT Projects</h3>
+          <div class="org">UAE Federal Government, Abu Dhabi</div>
+          <ul>
+            <li>Led the move from a paper-based organization to a fully digital one, eliminating 90% of paper-based processes in the first year.</li>
+            <li>Took on Head of IT responsibilities, overseeing 10+ concurrent digital projects with a combined budget of AED 5M+.</li>
+            <li>Ensured 100% compliance with Abu Dhabi Digital Authority standards and UAE cybersecurity regulations.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="date">Nov 2024 – Apr 2026 · 1 yr 6 mo</div>
+          <h3>Project Manager, Information Technology (Special Assignment)</h3>
+          <div class="org">UAE Federal Government, Abu Dhabi</div>
+          <ul>
+            <li>Project Manager for the Shared Enterprise Service Management Platform, M365 Modern Workplace, and Abu Dhabi Employee One Hub.</li>
+            <li>Change and technical lead on the Oracle Fusion data migration and digital transition.</li>
+            <li>Led the attendance system, shared translation system, and rollout of AI tools including Abu Dhabi Government GPT.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="date">May 2024 – Oct 2024 · 6 mo</div>
+          <h3>Business Partner, Information Technology (Special Assignment)</h3>
+          <div class="org">International Fund for Houbara Conservation (IFHC), Abu Dhabi</div>
+          <ul>
+            <li>Entity Task Force Lead for the Abu Dhabi CDPP (Royal Decree Program) and Technical Head for the Abu Dhabi Correspondence Management System.</li>
+            <li>Change Lead on the Oracle EBS and BI Publisher implementation.</li>
+            <li>Moved the Fund's data from on-premises to full cloud storage with zero data loss or downtime.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="date">Sep 2022 – May 2024 · 1 yr 9 mo</div>
+          <h3>Business Partner, Human Resources (Concurrent Role)</h3>
+          <div class="org">MBZ Raptor Fund, Abu Dhabi</div>
+          <ul>
+            <li>Partnered with management on workforce planning, manpower requirements and people decisions.</li>
+            <li>Led end-to-end talent acquisition and the full employee lifecycle.</li>
+            <li>Managed payroll, compensation, insurance, visa requirements, and outsourced workforce providers.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="date">Apr 2022 – Sep 2022 · 6 mo</div>
+          <h3>Senior Specialist, HR / IT Projects</h3>
+          <div class="org">International Fund for Houbara Conservation (IFHC), Abu Dhabi</div>
+          <ul>
+            <li>Led HR digital transformation and implemented a new performance management system.</li>
+            <li>Spearheaded organizational restructuring and served as HR liaison during the Abu Dhabi ERP rollout.</li>
+            <li>Managed annual HR budget preparation and variance analysis.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="date">Jun 2020 – Apr 2022 · 1 yr 11 mo</div>
+          <h3>Manager, Human Resource &amp; Administration</h3>
+          <div class="org">Avenir International Engineers &amp; Consultants, Abu Dhabi</div>
+          <ul>
+            <li>Led HR for a 500-employee company with AED 100M annual turnover, reporting to the CEO and General Manager.</li>
+            <li>Saved AED 1,000,000 in 2020 through in-house recruitment of senior roles.</li>
+            <li>Ran COVID-19 business continuity measures and served as acting IT Manager.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="date">Jan 2020 – Jun 2020 · 6 mo</div>
+          <h3>Officer, Human Resource &amp; Administration</h3>
+          <div class="org">Avenir International Engineers &amp; Consultants, Abu Dhabi</div>
+          <ul>
+            <li>Managed visa processing, insurance and labor card applications with a 100% compliance rate.</li>
+            <li>Ensured adherence to UAE Federal Labor Law and MOHRE regulations.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="date">Jun 2019 – Jan 2020 · 8 mo</div>
+          <h3>Assistant Human Resources Officer</h3>
+          <div class="org">Think &amp; Learn Pvt Ltd, Bengaluru, India</div>
+          <ul>
+            <li>Maintained HR files and records, performed audits, and supported payroll and benefits administration.</li>
+            <li>Coordinated new hire orientation and liaised with benefits providers and vendors.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="date">Jan 2019 – Jun 2019 · 6 mo</div>
+          <h3>Senior Team Lead</h3>
+          <div class="org">Kochi, India</div>
+          <ul>
+            <li>Led a sales and retail team before moving into HR.</li>
+          </ul>
+        </article>
+
+      </div>
+      <div class="progress-bar"><span id="barFill"></span></div>
+    </div>
+  </section>
+
+  <section id="constellation">
+    <div class="wrap">
+      <div class="eyebrow reveal">Career constellation</div>
+      <h2 class="reveal">Nine roles, one path</h2>
+      <p class="c-intro reveal">Hover, tap, or use the arrow keys to explore each star. The constellation moves through the roles on its own until you pick one.</p>
+      <div class="constellation reveal">
+        <svg id="cSvg" viewBox="0 0 960 420" role="group" aria-label="Career path, one star per role">
+          <defs>
+            <filter id="glowF" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="routeG" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" stop-color="#C9A227" stop-opacity=".15"/>
+              <stop offset=".5" stop-color="#C9A227" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#C9A227" stop-opacity=".15"/>
+            </linearGradient>
+          </defs>
+          <g id="stars"></g>
+          <path id="route" fill="none" stroke="url(#routeG)" stroke-width="1.6" stroke-dasharray="6 8"/>
+          <g id="nodes"></g>
+          <circle id="traveler" r="4" fill="#E9DDBE" filter="url(#glowF)">
+            <animateMotion dur="11s" repeatCount="indefinite"><mpath href="#route"/></animateMotion>
+          </circle>
+        </svg>
+      </div>
+      <div class="c-info" id="cInfo" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="eyebrow reveal">Projects</div>
+      <h2 class="reveal">Projects &amp; assignments</h2>
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="digital" aria-pressed="false">Digital &amp; ERP</button>
+        <button class="chip" type="button" data-filter="adnoc" aria-pressed="false">ADNOC &amp; Energy</button>
+        <button class="chip" type="button" data-filter="manpower" aria-pressed="false">Manpower &amp; HCM</button>
+        <span class="count" id="projCount">18 projects</span>
+      </div>
+
+      <div class="projects" id="projectGrid">
+
+        <article class="proj" data-cat="digital">
+          <div class="proj-top"><span class="proj-cat">Digital &amp; ERP</span><span class="role">Project Manager</span></div>
+          <h3>Abu Dhabi Government Shared TranslationHub</h3>
+          <div class="when">Jan 2026 – May 2026 · UAE Federal Government</div>
+          <p>The official AI-powered platform that unifies Abu Dhabi Government's tone of voice and terminology. It offers instant translation for fast, secure text and documents, and professional end-to-end translation through specialized translators.</p>
+        </article>
+
+        <article class="proj" data-cat="digital">
+          <div class="proj-top"><span class="proj-cat">Digital &amp; ERP</span><span class="role">Project Manager</span></div>
+          <h3>Abu Dhabi Government Shared Enterprise Service Management Platform</h3>
+          <div class="when">Jan 2025 – Jan 2026 · UAE Federal Government</div>
+          <p>An enterprise service management project built on ServiceNow. It provides a unified employee portal for seamless service access and aims to raise service standards across all government entities.</p>
+        </article>
+
+        <article class="proj" data-cat="digital">
+          <div class="proj-top"><span class="proj-cat">Digital &amp; ERP</span><span class="role">Project Manager</span></div>
+          <h3>Abu Dhabi One Hub Project for ADGEs</h3>
+          <div class="when">Feb 2024 – Feb 2025 · UAE Federal Government</div>
+          <p>A unified platform for Abu Dhabi Government employees on web and mobile. It brings together inbox and requests, news, and employee services in one place, for a seamless user experience.</p>
+        </article>
+
+        <article class="proj" data-cat="digital">
+          <div class="proj-top"><span class="proj-cat">Digital &amp; ERP</span><span class="role">Change / Technical Lead</span></div>
+          <h3>Abu Dhabi ERP Data Migration and Digital Transition (Oracle Fusion)</h3>
+          <div class="when">Feb 2024 – Jan 2025 · UAE Federal Government</div>
+          <p>Moved government finance, procurement and human capital processes from on-premise Oracle EBS to cloud-based Oracle Fusion. Designed to improve data quality across entities, rolling out in waves to more than 50,000 government employees.</p>
+        </article>
+
+        <article class="proj" data-cat="digital">
+          <div class="proj-top"><span class="proj-cat">Digital &amp; ERP</span><span class="role">Project Manager</span></div>
+          <h3>Abu Dhabi Government M365 Modern Workplace</h3>
+          <div class="when">Jan 2024 – Jan 2025 · UAE Federal Government</div>
+          <p>A unified Microsoft 365 workspace for all Abu Dhabi Government entities. It included identity management integration, shared security policies, and common tools such as Teams and SharePoint.</p>
+        </article>
+
+        <article class="proj" data-cat="digital">
+          <div class="proj-top"><span class="proj-cat">Digital &amp; ERP</span><span class="role">Technical Head</span></div>
+          <h3>Abu Dhabi Correspondence Management System</h3>
+          <div class="when">Jun 2024 – Aug 2024</div>
+          <p>A multi-tenant platform for managing all correspondence in one hub, with strong security controls, automated exchange of correspondence, and full lifecycle tracking.</p>
+        </article>
+
+        <article class="proj" data-cat="digital">
+          <div class="proj-top"><span class="proj-cat">Digital &amp; ERP</span><span class="role">Change Lead</span></div>
+          <h3>Abu Dhabi ERP Implementation and Integration (Oracle EBS and BI Publisher)</h3>
+          <div class="when">Jan 2023 – Jun 2024</div>
+          <p>Led the change management side of the Oracle EBS and BI Publisher implementation and integration.</p>
+        </article>
+
+        <article class="proj" data-cat="digital">
+          <div class="proj-top"><span class="proj-cat">Digital &amp; ERP</span><span class="role">Entity Task Force Lead</span></div>
+          <h3>Abu Dhabi Common Digital Platforms Program (CDP)</h3>
+          <div class="when">Royal Decree program</div>
+          <p>Served as Entity Task Force Lead for the Abu Dhabi Common Digital Platforms Program, a Royal Decree initiative.</p>
+        </article>
+
+        <article class="proj" data-cat="adnoc">
+          <div class="proj-top"><span class="proj-cat">ADNOC &amp; Energy</span><span class="role">HR Project Lead</span></div>
+          <h3>ADNOC Gas Processing: Smart Plant Documentation, Ruwais NGL-3</h3>
+          <div class="when">Jan 2020 – Apr 2022 · Avenir International Engineers &amp; Consultants</div>
+          <p>HR project lead on the Smart Plant Documentation project for ADNOC Gas Processing at Ruwais NGL-3.</p>
+        </article>
+
+        <article class="proj" data-cat="adnoc">
+          <div class="proj-top"><span class="proj-cat">ADNOC &amp; Energy</span><span class="role">HCM Focal Point</span></div>
+          <h3>ADNOC Gas Processing: Drafting Managed Services</h3>
+          <div class="when">Avenir International Engineers &amp; Consultants</div>
+          <p>HCM focal point for the drafting managed services engagement, coordinating manpower and HR needs.</p>
+        </article>
+
+        <article class="proj" data-cat="adnoc">
+          <div class="proj-top"><span class="proj-cat">ADNOC &amp; Energy</span><span class="role">HR Project Lead</span></div>
+          <h3>ADNOC Offshore: ESD Upgrade Project at Zirku Island</h3>
+          <div class="when">Avenir International Engineers &amp; Consultants</div>
+          <p>HR project lead on the emergency shutdown (ESD) upgrade at Zirku Island.</p>
+        </article>
+
+        <article class="proj" data-cat="adnoc">
+          <div class="proj-top"><span class="proj-cat">ADNOC &amp; Energy</span><span class="role">HR Project Lead</span></div>
+          <h3>ADNOC Offshore: GSA Design &amp; Draughting Services</h3>
+          <div class="when">Avenir International Engineers &amp; Consultants</div>
+          <p>HR project lead for the design and draughting services contract on offshore GSA work.</p>
+        </article>
+
+        <article class="proj" data-cat="adnoc">
+          <div class="proj-top"><span class="proj-cat">ADNOC &amp; Energy</span><span class="role">HR Project Lead</span></div>
+          <h3>ADNOC Onshore: Bu Hasa Well Tie-in (Post 2020)</h3>
+          <div class="when">Avenir International Engineers &amp; Consultants</div>
+          <p>HR project lead on the Bu Hasa well tie-in, post-2020 scope.</p>
+        </article>
+
+        <article class="proj" data-cat="adnoc">
+          <div class="proj-top"><span class="proj-cat">ADNOC &amp; Energy</span><span class="role">HR Project Lead</span></div>
+          <h3>ADNOC Onshore: Mastering Project</h3>
+          <div class="when">Avenir International Engineers &amp; Consultants</div>
+          <p>HR project lead on the Mastering Project for ADNOC Onshore.</p>
+        </article>
+
+        <article class="proj" data-cat="adnoc">
+          <div class="proj-top"><span class="proj-cat">ADNOC &amp; Energy</span><span class="role">HR Project Lead</span></div>
+          <h3>ADNOC Onshore: Layout Contract</h3>
+          <div class="when">Avenir International Engineers &amp; Consultants</div>
+          <p>HR project lead on the ADNOC Onshore layout contract.</p>
+        </article>
+
+        <article class="proj" data-cat="manpower">
+          <div class="proj-top"><span class="proj-cat">Manpower &amp; HCM</span><span class="role">HCM Focal Point</span></div>
+          <h3>CPPE: Manpower Secondment</h3>
+          <div class="when">Avenir International Engineers &amp; Consultants</div>
+          <p>HCM focal point for manpower secondment to CPPE.</p>
+        </article>
+
+        <article class="proj" data-cat="manpower">
+          <div class="proj-top"><span class="proj-cat">Manpower &amp; HCM</span><span class="role">HCM Focal Point</span></div>
+          <h3>Robstone: EPC Project</h3>
+          <div class="when">Avenir International Engineers &amp; Consultants</div>
+          <p>HCM focal point for manpower supplied to the Robstone EPC project.</p>
+        </article>
+
+        <article class="proj" data-cat="manpower">
+          <div class="proj-top"><span class="proj-cat">Manpower &amp; HCM</span><span class="role">HCM Focal Point</span></div>
+          <h3>Worley: Manpower Secondment</h3>
+          <div class="when">Avenir International Engineers &amp; Consultants</div>
+          <p>HCM focal point for manpower secondment to Worley.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="wrap">
+      <div class="eyebrow reveal">AI &amp; Automation</div>
+      <h2 class="reveal">Systems I have built</h2>
+      <p class="muted reveal" style="margin: -8px 0 28px;">Select a card to see the outcome.</p>
+      <div class="grid">
+        <div class="flip reveal" role="button" tabindex="0" aria-pressed="false">
+          <div class="flip-inner">
+            <div class="flip-face"><span class="hint">AI HR Policy Assistant</span><h3>Bilingual policy answers</h3><p>A bilingual (English/Arabic) query engine aligned to Abu Dhabi DGE policy.</p></div>
+            <div class="flip-face back"><span class="hint">Outcome</span><p class="outcome">Policy response times cut from hours to seconds.</p></div>
+          </div>
+        </div>
+        <div class="flip reveal" role="button" tabindex="0" aria-pressed="false">
+          <div class="flip-inner">
+            <div class="flip-face"><span class="hint">AI Duty Travel Automation</span><h3>Itineraries and per diems</h3><p>Generates itineraries and per diem calculations for out-of-system travel, in line with approved DGE policy.</p></div>
+            <div class="flip-face back"><span class="hint">Outcome</span><p class="outcome">Manual processing removed from duty travel requests.</p></div>
+          </div>
+        </div>
+        <div class="flip reveal" role="button" tabindex="0" aria-pressed="false">
+          <div class="flip-inner">
+            <div class="flip-face"><span class="hint">AI Invoice Validation Engine</span><h3>Contract checks on every invoice</h3><p>Checks contract mark-up percentages and VAT line items against source contracts.</p></div>
+            <div class="flip-face back"><span class="hint">Outcome</span><p class="outcome">A 99.9% reduction in invoice errors.</p></div>
+          </div>
+        </div>
+        <div class="flip reveal" role="button" tabindex="0" aria-pressed="false">
+          <div class="flip-inner">
+            <div class="flip-face"><span class="hint">Document-to-Invoice Reconciliation</span><h3>Amounts matched before approval</h3><p>Cross-checks amounts in supporting documents against invoice totals before financial approval.</p></div>
+            <div class="flip-face back"><span class="hint">Outcome</span><p class="outcome">Reconciliation discrepancies caught before they reach approval.</p></div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px;" class="reveal">
+        <span class="tag">Claude</span>
+        <span class="tag">OpenAI GPT-4</span>
+        <span class="tag">Google Gemini</span>
+        <span class="tag">Microsoft Copilot</span>
+        <span class="tag">Notion AI</span>
+        <span class="tag">Multi-agent design</span>
+        <span class="tag">Prompt engineering</span>
+        <span class="tag">API integration</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="wrap">
+      <div class="eyebrow reveal">Credentials</div>
+      <h2 class="reveal">Education and certifications</h2>
+
+      <div class="card reveal" style="margin-bottom: 22px;">
+        <h3 style="margin-bottom: 18px; font-family: Georgia, serif; font-weight: 500; font-size: 1.3rem;">Education</h3>
+        <div class="edu-grid">
+          <div class="edu spot"><span class="edu-deg">MBA</span><strong>Finance / HR</strong><span>College of Engineering Trivandrum, India</span></div>
+          <div class="edu spot"><span class="edu-deg">MCom</span><strong>General</strong><span>Annamalai University, India</span></div>
+          <div class="edu spot"><span class="edu-deg">BCom</span><strong>Accounting and Finance</strong><span>University of Kerala, India</span></div>
+        </div>
+        <div class="spec-title">Specialisations · hover or click to explore</div>
+        <div class="spec-row">
+          <button class="spec" type="button" aria-expanded="false"><strong>Generative AI Assistants</strong><small>Vanderbilt University, USA</small><span class="desc"><span><span class="dtext">Specialisation in designing and building generative AI assistants.</span></span></span></button>
+          <button class="spec" type="button" aria-expanded="false"><strong>Company Secretary (Executive Level)</strong><small>Institute of Company Secretaries of India</small><span class="desc"><span><span class="dtext">Executive-level training in corporate governance, compliance and board processes.</span></span></span></button>
+          <button class="spec" type="button" aria-expanded="false"><strong>Diploma in Supervision</strong><small>Alison (MOOC)</small><span class="desc"><span><span class="dtext">Online diploma in supervisory and people-management fundamentals.</span></span></span></button>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3 style="margin-bottom: 18px; font-family: Georgia, serif; font-weight: 500; font-size: 1.3rem;">Certifications</h3>
+        <div class="cert-cloud" id="certCloud">
+          <span class="cert-chip">Mastering Strategic Project Management</span>
+          <span class="cert-chip">Artificial Intelligence and Career Empowerment</span>
+          <span class="cert-chip">One Million Prompters Initiative</span>
+          <span class="cert-chip">Digital Enable Expert (UAE PASS)</span>
+          <span class="cert-chip">Six Sigma and the Organization (Advanced)</span>
+          <span class="cert-chip">Google AI Professional Certificate</span>
+          <span class="cert-chip">AI for Everyone</span>
+          <span class="cert-chip">PMI Essentials: M.O.R.E. Maximizing Project Success</span>
+          <span class="cert-chip">AI in CyberSecurity</span>
+          <span class="cert-chip">Lean Six Sigma Yellow Belt</span>
+          <span class="cert-chip">Data Privacy, Security, Governance, Risk and Compliance</span>
+          <span class="cert-chip">Microsoft Dynamics 365 Business Central: Supply Chain</span>
+          <span class="cert-chip">Microsoft Dynamics 365 Business Central: Finance</span>
+          <span class="cert-chip">Leverage New Technologies</span>
+          <span class="cert-chip">Performance Management</span>
+          <span class="cert-chip">Environment Sustainability and Green Development Policies</span>
+          <span class="cert-chip">ADDAEE: Employees</span>
+          <span class="cert-chip">Abu Dhabi Accountability Authority Program</span>
+          <span class="cert-chip">ADP Payroll Specialist Specialization</span>
+          <span class="cert-chip">ISO 9001:2015 Quality Management System</span>
+          <span class="cert-chip">Lean Six Sigma White Belt</span>
+          <span class="cert-chip">Google IT Support Professional Certificate</span>
+          <span class="cert-chip">Cybersecurity Roles, Processes and Operating System Security</span>
+          <span class="cert-chip">Google AI Essentials</span>
+          <span class="cert-chip">Microsoft Solution Certified Technical Professional</span>
+          <span class="cert-chip">Project Management Professional (PMP)</span>
+          <span class="cert-chip">Introduction to Cybersecurity Tools and Cyber Attacks</span>
+          <span class="cert-chip">HRCI Human Resource Associate Specialization</span>
+          <span class="cert-chip">Human Resources: Managing Employee Problems</span>
+          <span class="cert-chip">Financial Risk Analytics</span>
+          <span class="cert-chip">Implementing Microsoft Azure Infrastructure Solutions</span>
+          <span class="cert-chip">HR Database Management System</span>
+          <span class="cert-chip">Basic Workplace Security Awareness</span>
+          <span class="cert-chip">Fundamentals of Emergency Management</span>
+          <span class="cert-chip">Emergency Planning</span>
+          <span class="cert-chip">Google Ads Search Certification</span>
+          <span class="cert-chip">Certificate Examination for Business Correspondents and Facilitators</span>
+          <span class="cert-chip">Diploma in Supervision</span>
+          <span class="cert-chip">Google Analytics</span>
+          <span class="cert-chip">Human Resource Management System</span>
+          <span class="cert-chip">Professional in Human Resources (PHR)</span>
+          <span class="cert-chip">Oracle Certified Associate (Database)</span>
+        </div>
+        <button class="cert-more" id="certMore" type="button" aria-expanded="false">Show all certifications</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="eyebrow reveal">Contact</div>
+      <h2 class="reveal">Let's work together</h2>
+      <p class="reveal">I'm open to senior HR Business Partner and Project Manager roles in the UAE. Choose a topic below or write your own message. It will open in your email app, ready to send.</p>
+      <div class="topics reveal">
+        <button class="chip topic" type="button" data-topic="I'd like to discuss an HR Business Partner role.">HR Business Partner role</button>
+        <button class="chip topic" type="button" data-topic="I'd like to discuss a Project Manager role or programme.">Project Manager role</button>
+        <button class="chip topic" type="button" data-topic="I'd like to discuss an ERP or digital transformation programme.">ERP or digital programme</button>
+        <button class="chip topic" type="button" data-topic="I'd like to discuss a consulting or AI automation engagement.">Consulting or AI automation</button>
+      </div>
+      <div class="buttons reveal">
+        <button class="btn primary magnetic" type="button" data-open-contact>Write to me</button>
+        <a class="btn magnetic" href="https://www.linkedin.com/in/jai-nj/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<dialog id="contactDialog" aria-labelledby="dialogTitle">
+  <form id="contactForm" method="dialog">
+    <div id="formView">
+      <h3 id="dialogTitle">Send a message</h3>
+      <p class="sub">Fill this in and your email app will open with the message ready.</p>
+      <label>Your name <input name="name" required autocomplete="name"></label>
+      <label>Your email <input name="email" type="email" required autocomplete="email"></label>
+      <label>What do you need? <textarea name="message" required placeholder="A role, project, or question"></textarea></label>
+      <div class="dialog-actions">
+        <button type="button" data-close>Cancel</button>
+        <button type="submit" class="send">Write the email</button>
+      </div>
+    </div>
+    <div id="doneView" class="done">
+      <h3>Almost there</h3>
+      <p class="sub">Your email app should have opened with your message. Press send there, and I'll reply within one business day.</p>
+      <p class="sub">Email app didn't open? Write to <a href="mailto:jai.nj@hotmail.com">jai.nj@hotmail.com</a>.</p>
+      <div class="dialog-actions"><button type="button" data-close>Close</button></div>
+    </div>
+  </form>
+</dialog>
+
+<button id="toTop" type="button" aria-label="Back to top">&#8593;</button>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Jai N J · Abu Dhabi, UAE</span>
+    <span>Languages: Malayalam (native), English, Hindi, Tamil, Arabic (elementary)</span>
+  </div>
+</footer>
+
+<!-- Optional libraries: the page still works without them -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+(() => {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const hasGSAP = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
+  const hasThree = typeof window.THREE !== 'undefined';
+
+  // Split the name into letters, keeping the spaces
+  const nameEl = document.getElementById('name');
+  const nameText = nameEl.textContent;
+  nameEl.setAttribute('aria-label', nameText);
+  nameEl.textContent = '';
+  [...nameText].forEach((ch, i) => {
+    const s = document.createElement('span');
+    s.className = ch === ' ' ? 'sp' : 'ch';
+    s.style.setProperty('--d', i);
+    s.setAttribute('aria-hidden', 'true');
+    if (ch !== ' ') s.textContent = ch;
+    else s.innerHTML = '&nbsp;';
+    nameEl.appendChild(s);
+  });
+
+  // Intro gate
+  const intro = document.getElementById('intro');
+  const loadBar = document.getElementById('loadBar');
+  const enterBtn = document.getElementById('enterBtn');
+  const openIntro = () => {
+    intro.classList.add('hidden');
+    document.querySelectorAll('.reveal, .split').forEach(el => el.classList.add('in'));
+    runCounters();
+  };
+  if (reduce) intro.classList.add('hidden');
+  requestAnimationFrame(() => { loadBar.style.width = '100%'; });
+  setTimeout(() => enterBtn.classList.add('ready'), reduce ? 0 : 1700);
+  enterBtn.addEventListener('click', openIntro);
+  if (reduce) openIntro();
+
+  // Live clock and date (Abu Dhabi time)
+  const timeEl = document.getElementById('localTime');
+  const clockEl = document.getElementById('clock'), dateEl = document.getElementById('dateLine');
+  const timeFmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Dubai', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+  const dateFmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Dubai', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  const shortFmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Dubai', hour: 'numeric', minute: '2-digit', hour12: true });
+  const tickClock = () => {
+    const now = new Date();
+    clockEl.textContent = timeFmt.format(now);
+    dateEl.textContent = dateFmt.format(now);
+    timeEl.textContent = 'Local time ' + shortFmt.format(now);
+  };
+  tickClock(); setInterval(tickClock, 1000);
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Scroll progress
+  const progress = document.getElementById('progress');
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+  };
+  window.addEventListener('scroll', () => requestAnimationFrame(updateProgress), { passive: true });
+
+  // Count-up stats
+  let counted = false;
+  function runCounters() {
+    if (counted) return; counted = true;
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = parseFloat(el.dataset.count), dec = +el.dataset.decimals || 0;
+      const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+      if (reduce) { el.textContent = pre + target.toFixed(dec) + suf; return; }
+      const start = performance.now(), dur = 1400;
+      const step = now => {
+        const p = Math.min((now - start) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + (target * eased).toFixed(dec) + suf;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }
+  const statIO = new IntersectionObserver(es => {
+    if (es.some(e => e.isIntersecting)) { runCounters(); statIO.disconnect(); }
+  }, { threshold: 0.4 });
+  statIO.observe(document.querySelector('.stats'));
+
+  // Hero WebGL core (foreground element only)
+  const hero = document.getElementById('hero');
+  const orbitEl = document.getElementById('orbit');
+  const orbitInner = document.getElementById('orbitInner');
+  let orbitTarget = { x: 0, y: 0 }, orbitCurrent = { x: 0, y: 0 };
+  if (hasThree && !reduce) {
+    const wcv = document.getElementById('webgl');
+    const renderer = new THREE.WebGLRenderer({ canvas: wcv, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    camera.position.z = 4.4;
+    const group = new THREE.Group();
+    scene.add(group);
+    const core = new THREE.Mesh(new THREE.IcosahedronGeometry(1.15, 1), new THREE.MeshBasicMaterial({ color: 0xC9A227, wireframe: true, transparent: true, opacity: 0.5 }));
+    group.add(core);
+    const inner = new THREE.Mesh(new THREE.IcosahedronGeometry(0.62, 0), new THREE.MeshBasicMaterial({ color: 0xE9DDBE, wireframe: true, transparent: true, opacity: 0.3 }));
+    group.add(inner);
+    const N = 240, pos = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      const r = 1.9 + Math.random() * 0.7, th = Math.random() * Math.PI * 2, ph = Math.acos(2 * Math.random() - 1);
+      pos[i * 3] = r * Math.sin(ph) * Math.cos(th);
+      pos[i * 3 + 1] = r * Math.sin(ph) * Math.sin(th);
+      pos[i * 3 + 2] = r * Math.cos(ph);
+    }
+    const pgeo = new THREE.BufferGeometry();
+    pgeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const points = new THREE.Points(pgeo, new THREE.PointsMaterial({ color: 0xE9DDBE, size: 0.025, transparent: true, opacity: 0.7 }));
+    group.add(points);
+    const resize3D = () => {
+      const w = wcv.clientWidth, h = wcv.clientHeight;
+      if (!w || !h) return;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h; camera.updateProjectionMatrix();
+    };
+    resize3D();
+    window.addEventListener('resize', resize3D);
+    orbitEl.addEventListener('pointermove', e => {
+      const r = orbitEl.getBoundingClientRect();
+      orbitTarget.x = ((e.clientX - r.left) / r.width - 0.5) * 2;
+      orbitTarget.y = ((e.clientY - r.top) / r.height - 0.5) * 2;
+    });
+    orbitEl.addEventListener('pointerleave', () => { orbitTarget = { x: 0, y: 0 }; });
+    let clockT = 0;
+    (function loop() {
+      clockT += 0.01;
+      orbitCurrent.x += (orbitTarget.x - orbitCurrent.x) * 0.06;
+      orbitCurrent.y += (orbitTarget.y - orbitCurrent.y) * 0.06;
+      core.rotation.y += 0.004; core.rotation.x += 0.0015;
+      inner.rotation.y -= 0.006; inner.rotation.z += 0.003;
+      points.rotation.y += 0.0025;
+      group.rotation.y = orbitCurrent.x * 0.6;
+      group.rotation.x = orbitCurrent.y * 0.4;
+      const s = 1 + Math.sin(clockT * 2) * 0.03;
+      core.scale.set(s, s, s);
+      renderer.render(scene, camera);
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  // Hero: tilt the skill ring with the pointer
+  hero.addEventListener('pointermove', e => {
+    const r = hero.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    if (!reduce) orbitInner.style.transform = `rotateX(${-y * 20}deg) rotateY(${x * 30}deg)`;
+  });
+  hero.addEventListener('pointerleave', () => { orbitInner.style.transform = ''; });
+
+  // GSAP scroll effects
+  if (hasGSAP && !reduce) {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('#heroGrid', { yPercent: -10, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
+    gsap.to('#orbit', { rotate: 20, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
+    gsap.utils.toArray('#about .eyebrow, #experience .eyebrow, #projects .eyebrow, #credentials .eyebrow').forEach(el => {
+      gsap.from(el, { x: -40, opacity: 0, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%' } });
+    });
+  }
+
+  // Tilt for portrait and cards (pointer devices only)
+  if (fine && !reduce) {
+    document.querySelectorAll('.portrait, .stat').forEach(el => {
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        el.style.transform = `perspective(900px) rotateX(${(.5 - y) * 8}deg) rotateY(${(x - .5) * 10}deg)`;
+      });
+      el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+    });
+  }
+
+  // Magnetic buttons (pointer devices only)
+  if (fine && !reduce) {
+    document.querySelectorAll('.magnetic').forEach(btn => {
+      btn.addEventListener('pointermove', e => {
+        const r = btn.getBoundingClientRect();
+        const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+        btn.style.transform = `translate(${dx * .22}px, ${dy * .3}px)`;
+      });
+      btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
+    });
+  }
+
+  // Focus doors
+  document.querySelectorAll('.door').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.setAttribute('aria-expanded', String(btn.getAttribute('aria-expanded') !== 'true'));
+    });
+  });
+
+  // Flip cards for AI systems
+  document.querySelectorAll('.flip').forEach(card => {
+    const flipIt = () => {
+      const open = card.classList.toggle('open');
+      card.setAttribute('aria-pressed', String(open));
+    };
+    card.addEventListener('click', flipIt);
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flipIt(); } });
+  });
+
+  // Pull cord: normal → black and white → opposite colour → normal
+  const rope = document.getElementById('rope');
+  const ropeLabel = rope.querySelector('.label');
+  const ropeLabels = ['Pull for B&W', 'Pull for opposite colour', 'Pull for colour'];
+  let ropeState = 0;
+  function pullRope() {
+    ropeState = (ropeState + 1) % 3;
+    document.documentElement.classList.toggle('mono', ropeState === 1);
+    document.documentElement.classList.toggle('invert', ropeState === 2);
+    ropeLabel.textContent = ropeLabels[ropeState];
+    rope.setAttribute('aria-checked', String(ropeState !== 0));
+    rope.classList.remove('swing');
+    rope.classList.add('pulling');
+    setTimeout(() => { rope.classList.remove('pulling'); rope.classList.add('swing'); }, 220);
+    setTimeout(() => rope.classList.remove('swing'), 1000);
+  }
+  rope.addEventListener('click', pullRope);
+  rope.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pullRope(); } });
+
+  // Section dots and header links follow the scroll
+  const dotLinks = [...document.querySelectorAll('#dots a')];
+  const dotIO = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) dotLinks.forEach(a => a.classList.toggle('on', a.dataset.s === e.target.id)); });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  dotLinks.forEach(a => { const s = document.getElementById(a.dataset.s); if (s) dotIO.observe(s); });
+  const links = [...document.querySelectorAll('header nav a')];
+  const sectionIO = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id)); });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  ['about', 'focus', 'experience', 'projects', 'ai', 'contact'].forEach(id => sectionIO.observe(document.getElementById(id)));
+
+  // Hiring snapshot: jump to the matching work
+  document.querySelectorAll('[data-snap]').forEach(b => b.addEventListener('click', () => {
+    const k = b.dataset.snap;
+    if (k === 'hr') {
+      const door = document.querySelector('.door');
+      if (door && door.getAttribute('aria-expanded') !== 'true') door.click();
+      document.getElementById('focus').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    } else if (k === 'pm' || k === 'adnoc') {
+      document.querySelector('.chip[data-filter="' + (k === 'pm' ? 'digital' : 'adnoc') + '"]').click();
+      document.getElementById('projects').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    } else if (k === 'ai') {
+      document.getElementById('ai').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    }
+  }));
+
+  // Career constellation
+  (() => {
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const cSvg = document.getElementById('cSvg');
+    if (!cSvg) return;
+    const roles = [
+      { date: 'Jan 2019', role: 'Senior Team Lead', org: 'Kochi, India', note: 'Led a sales and retail team before moving into HR.' },
+      { date: 'Jun 2019', role: 'Assistant HR Officer', org: 'Think & Learn, Bengaluru', note: 'High-volume recruitment and onboarding during a period of rapid expansion.' },
+      { date: 'Jan 2020', role: 'HR Officer', org: 'Avenir International Engineers & Consultants', note: 'Visa, insurance and labor card processing at a 100% compliance rate.' },
+      { date: 'Jun 2020', role: 'HR & Admin Manager', org: 'Avenir International Engineers & Consultants', note: 'Saved AED 1,000,000 through in-house recruitment of senior roles.' },
+      { date: 'Apr 2022', role: 'Senior Specialist, HR / IT', org: 'International Fund for Houbara Conservation', note: 'Introduced a new performance management system and led HR digital transformation.' },
+      { date: 'Sep 2022', role: 'Business Partner, HR', org: 'MBZ Raptor Fund', note: 'Ran the full employee lifecycle and oversaw outsourced workforce providers.' },
+      { date: 'May 2024', role: 'Business Partner, IT', org: 'International Fund for Houbara Conservation', note: 'Moved the Fund to cloud storage with zero data loss or downtime.' },
+      { date: 'Nov 2024', role: 'Project Manager, IT', org: 'UAE Federal Government', note: 'Led the M365 Modern Workplace, One Hub and Enterprise Service Management projects.' },
+      { date: 'Nov 2024', role: 'Senior Specialist, HR / IT', org: 'UAE Federal Government', note: 'Eliminated about 90% of paper-based processes in the first year.' }
+    ];
+    const n = roles.length;
+    const starsG = document.getElementById('stars');
+    const nodesG = document.getElementById('nodes');
+    const info = document.getElementById('cInfo');
+    const routeEl = document.getElementById('route');
+    const traveler = document.getElementById('traveler');
+    for (let s = 0; s < 90; s++) {
+      const c = document.createElementNS(svgNS, 'circle');
+      c.setAttribute('cx', (Math.random() * 960).toFixed(1));
+      c.setAttribute('cy', (Math.random() * 420).toFixed(1));
+      c.setAttribute('r', (Math.random() * 1.2 + 0.4).toFixed(2));
+      c.setAttribute('class', 'star-bg');
+      starsG.appendChild(c);
+    }
+    const cpts = roles.map((_, i) => ({ x: 70 + i * (820 / (n - 1)), y: 260 + Math.sin(i * 0.85) * 110 }));
+    let d = `M ${cpts[0].x} ${cpts[0].y}`;
+    for (let i = 1; i < n; i++) {
+      const p = cpts[i - 1], q = cpts[i], mx = (q.x - p.x) / 2;
+      d += ` C ${p.x + mx} ${p.y}, ${q.x - mx} ${q.y}, ${q.x} ${q.y}`;
+    }
+    routeEl.setAttribute('d', d);
+    if (reduce && traveler) traveler.remove();
+    const nodes = cpts.map((p, i) => {
+      const g = document.createElementNS(svgNS, 'g');
+      g.setAttribute('class', 'star-node');
+      g.setAttribute('tabindex', '0');
+      g.setAttribute('role', 'button');
+      g.setAttribute('aria-label', roles[i].role + ', ' + roles[i].date);
+      g.setAttribute('transform', `translate(${p.x} ${p.y})`);
+      g.innerHTML = `<circle class="halo" r="18"></circle><circle class="core" r="6"></circle><text y="34">${roles[i].date.split(' ')[1]}</text>`;
+      nodesG.appendChild(g);
+      return g;
+    });
+    let active = -1, pausedUntil = 0;
+    function setActive(i) {
+      if (i === active) return;
+      active = i;
+      nodes.forEach((g, k) => g.classList.toggle('active', k === i));
+      const r = roles[i];
+      info.classList.remove('swap'); void info.offsetWidth; info.classList.add('swap');
+      info.innerHTML = `<div class="c-date">${r.date} · Role ${i + 1} of ${n}</div><h3>${r.role}</h3><p class="c-org">${r.org}</p><p>${r.note}</p>`;
+    }
+    nodes.forEach((g, i) => {
+      g.addEventListener('pointerenter', () => { pausedUntil = Infinity; setActive(i); });
+      g.addEventListener('pointerleave', () => { pausedUntil = Date.now() + 2500; });
+      g.addEventListener('click', () => { setActive(i); pausedUntil = Date.now() + 8000; });
+      g.addEventListener('focus', () => { pausedUntil = Infinity; setActive(i); });
+      g.addEventListener('blur', () => { pausedUntil = Date.now() + 2500; });
+      g.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActive(i); pausedUntil = Date.now() + 8000; }
+        if (e.key === 'ArrowRight') nodes[Math.min(i + 1, n - 1)].focus();
+        if (e.key === 'ArrowLeft') nodes[Math.max(i - 1, 0)].focus();
+      });
+    });
+    setActive(0);
+    window.addEventListener('constellation:select', e => { pausedUntil = Date.now() + 8000; setActive(e.detail); });
+    if (!reduce) setInterval(() => { if (Date.now() > pausedUntil) setActive((active + 1) % n); }, 3200);
+  })();
+
+  // Hover spotlight on cards
+  document.querySelectorAll('.card, .proj, .entry, .stat, .door, .edu, .spec, .flip-face').forEach(el => {
+    el.classList.add('spot');
+    el.addEventListener('pointermove', e => {
+      const r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
+
+  // Click ripple on buttons and chips
+  document.querySelectorAll('.btn, .chip, .cert-chip, .arrow').forEach(el => {
+    el.addEventListener('pointerdown', e => {
+      const r = el.getBoundingClientRect();
+      const s = document.createElement('span');
+      const size = Math.max(r.width, r.height) * 2;
+      s.className = 'ripple';
+      s.style.width = s.style.height = size + 'px';
+      s.style.left = (e.clientX - r.left - size / 2) + 'px';
+      s.style.top = (e.clientY - r.top - size / 2) + 'px';
+      el.appendChild(s);
+      setTimeout(() => s.remove(), 650);
+    });
+  });
+
+  // Certification chips: click to pick
+  document.querySelectorAll('.cert-chip').forEach(c => c.addEventListener('click', () => c.classList.toggle('picked')));
+
+  // Specialisations: click to expand
+  document.querySelectorAll('.spec').forEach(b => b.addEventListener('click', () => {
+    b.setAttribute('aria-expanded', String(b.getAttribute('aria-expanded') !== 'true'));
+  }));
+
+  // Experience entries: click to highlight the matching star in the constellation
+  document.querySelectorAll('.track .entry').forEach((el, i, all) => {
+    const go = document.createElement('span');
+    go.className = 'go';
+    go.textContent = 'View on constellation →';
+    el.appendChild(go);
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('role', 'button');
+    const pick = () => {
+      document.getElementById('constellation').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+      window.dispatchEvent(new CustomEvent('constellation:select', { detail: all.length - 1 - i }));
+    };
+    el.addEventListener('click', pick);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); pick(); } });
+  });
+
+  // Projects filter
+  const chips = [...document.querySelectorAll('.chip[data-filter]')];
+  const projects = [...document.querySelectorAll('.proj')];
+  const projCount = document.getElementById('projCount');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const f = chip.dataset.filter;
+      chips.forEach(c => c.setAttribute('aria-pressed', String(c === chip)));
+      let shown = 0;
+      projects.forEach(p => {
+        const match = f === 'all' || p.dataset.cat === f;
+        p.classList.toggle('off', !match);
+        if (match) { shown++; p.style.animationDelay = (shown * 40) + 'ms'; }
+      });
+      projCount.textContent = shown + ' project' + (shown === 1 ? '' : 's');
+    });
+  });
+
+  // Timeline track
+  const track = document.getElementById('track');
+  const entries = [...track.querySelectorAll('.entry')];
+  const prev = document.getElementById('prev'), next = document.getElementById('next');
+  const cur = document.getElementById('current'), tot = document.getElementById('total');
+  const barFill = document.getElementById('barFill');
+  tot.textContent = String(entries.length).padStart(2, '0');
+  let lastIndex = -1;
+  function activeIndex() {
+    const x = track.scrollLeft;
+    let best = 0, dist = Infinity;
+    entries.forEach((el, i) => { const dd = Math.abs(el.offsetLeft - track.offsetLeft - x); if (dd < dist) { dist = dd; best = i; } });
+    return best;
+  }
+  function updateTimeline() {
+    const i = activeIndex();
+    if (i !== lastIndex) {
+      lastIndex = i;
+      cur.textContent = String(i + 1).padStart(2, '0');
+      cur.classList.remove('bump'); void cur.offsetWidth; cur.classList.add('bump');
+    }
+    const max = track.scrollWidth - track.clientWidth;
+    const pct = max > 0 ? (track.scrollLeft / max) : 0;
+    const width = 100 / entries.length;
+    barFill.style.width = width + '%';
+    barFill.style.marginLeft = (pct * (100 - width)) + '%';
+    prev.disabled = track.scrollLeft <= 4;
+    next.disabled = track.scrollLeft >= max - 4;
+  }
+  function go(dir) {
+    const i = Math.min(Math.max(activeIndex() + dir, 0), entries.length - 1);
+    entries[i].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', inline: 'start', block: 'nearest' });
+  }
+  prev.addEventListener('click', () => go(-1));
+  next.addEventListener('click', () => go(1));
+  track.addEventListener('scroll', () => requestAnimationFrame(updateTimeline), { passive: true });
+  track.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+  });
+  window.addEventListener('resize', updateTimeline);
+  updateTimeline();
+
+  // Certifications: show a few, expand on request
+  const certCloud = document.getElementById('certCloud');
+  const certMore = document.getElementById('certMore');
+  const certChips = [...certCloud.querySelectorAll('.cert-chip')];
+  certChips.forEach((c, i) => { if (i >= 12) c.classList.add('extra'); });
+  certMore.textContent = 'Show all ' + certChips.length + ' certifications';
+  certMore.addEventListener('click', () => {
+    const open = certCloud.classList.toggle('expanded');
+    certMore.setAttribute('aria-expanded', String(open));
+    certMore.textContent = open ? 'Show fewer' : 'Show all ' + certChips.length + ' certifications';
+  });
+
+  // Back to top
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => toTop.classList.toggle('show', window.scrollY > 600), { passive: true });
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }));
+
+  // Contact topics and dialog
+  const dialog = document.getElementById('contactDialog');
+  const form = document.getElementById('contactForm');
+  const formView = document.getElementById('formView');
+  const doneView = document.getElementById('doneView');
+  document.querySelectorAll('[data-open-contact]').forEach(b => b.addEventListener('click', () => {
+    formView.style.display = ''; doneView.classList.remove('show');
+    dialog.showModal();
+  }));
+  document.querySelectorAll('.topic').forEach(b => b.addEventListener('click', () => {
+    document.querySelector('[data-open-contact]').click();
+    dialog.querySelector('textarea').value = b.dataset.topic;
+  }));
+  dialog.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => dialog.close()));
+  dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    const d = new FormData(form);
+    const subject = encodeURIComponent('Message from ' + d.get('name'));
+    const body = encodeURIComponent(d.get('message') + '\n\nFrom: ' + d.get('name') + ' <' + d.get('email') + '>');
+    window.location.href = 'mailto:jai.nj@hotmail.com?subject=' + subject + '&body=' + body;
+    formView.style.display = 'none';
+    doneView.classList.add('show');
+  });
+})();
+</script>
+
+</body>
+</html>
